@@ -1,0 +1,68 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+}
+.container{
+    width: 60%;
+    margin: auto;
+}
+.live-item{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.live-div{
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgb(53, 30, 30);
+}
+.live{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    background: rgb(235, 21, 50);
+}
+.menu-item,.logs-items{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;   
+    border: 1px solid rgb(53, 30, 30);
+    margin: 2em 0
+}
+.menu-item div{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+}
+.menu-item div button{
+    padding: .5em 4em;
+    border: orange;
+    background: orange;
+    color: #fff;
+}
+.logs-items ul{
+    padding: 0;
+    background: #eee;
+    font-size: 0;
+}
+li{
+    font-size: 16px;
+    line-height: 2em;
+    color: #fff;
+    width: 100%;
+    list-style: none;
+}
+.blue{
+    background: blue;
+    opacity: .5;
+}
+.red{
+    opacity: .5;
+    background: red
+}
+.green{
+    opacity: .5;
+    background: green
+}
