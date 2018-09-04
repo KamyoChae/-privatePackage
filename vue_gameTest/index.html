@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="" id="app">
+
+            <div class="container">
+                <div class="live-item">
+                    <div class="item">
+                        <h1>巫妖</h1>
+                        <div class="live-div">
+                            <div class="live" :style="{width:wuyao + '%'}">{{wuyao}}</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h1>夜魇三塔</h1>
+                        <div class="live-div">
+                            <div class="live" :style="{width:boss + '%'}">{{boss}}</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item">
+                    <div class="start" v-if="start" @click="startshow">
+                        <button>开始游戏</button>
+                    </div>
+                    <div class="menu"  v-if="!start">
+
+                        <button class="normal" @click="nomarlAttact">普通攻击</button>
+                        <button class="skil" @click="unnomarlAttact">技能攻击</button>
+                        <button class="skil" @click="help">治疗</button>
+                        <button class="skil" @click="overGame">结束游戏</button>
+                    </div>
+                </div>
+                <div class="logs-items" v-if="logs.length">
+                    <ul v-for="(log) in logs" >
+                        <li :class="key" v-for="(index,key) in log">{{index}} </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
