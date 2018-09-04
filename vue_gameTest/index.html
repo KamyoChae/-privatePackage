@@ -44,8 +44,8 @@
                     </div>
                 </div>
                 <div class="logs-items" v-if="logs.length">
-                    <ul v-for="(log) in logs" >
-                        <li :class="key" v-for="(index,key) in log">{{index}} </li>
+                    <ul >
+                        <li :class="log.myclass" v-for="log in logs  " >{{log.tips}} </li>
                     </ul>
                 </div>
 
