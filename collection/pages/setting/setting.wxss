@@ -1,0 +1,47 @@
+.form-view {
+  display: flex;
+  flex-direction: column;
+  text-indent: 1em;
+}
+
+input, label {
+  height: 3em;
+  line-height: 3em;
+  font-size: 10pt;
+}
+
+input {
+  box-sizing: border-box;
+  padding-left: 1em;
+  background: #fff;
+  text-indent: 0;
+}
+
+label {
+  color: #d81e06;
+}
+
+.tips {
+  color: #888;
+}
+
+.name-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutUser {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 1.5em;
+  font-size: 10pt;
+  padding: 1em;
+  text-indent: 0;
+  background: #fff;
+}
+button{
+  width: 80%;
+  margin: 20px auto;
+  color: #fff;
+  background: #d81e06;
+}

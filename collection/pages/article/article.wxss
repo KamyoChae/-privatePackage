@@ -1,0 +1,133 @@
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.article {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+}
+
+.title {
+  box-sizing: border-box;
+  font-size: 14pt;
+  padding: 0.5em;
+  border-bottom: 1rpx solid #eee;
+}
+
+.about-me {
+  font-size: 10pt;
+  color: #8a8a8a;
+  margin: 1em 0;
+}
+
+.about-me text {
+  margin: 10rpx;
+}
+
+.blue {
+  color: #1954c2;
+}
+
+.article-body {
+  box-sizing: border-box;
+  padding: 1em;
+  font-size: 12pt;
+  line-height: 1.6em;
+}
+
+.article-body text {
+  display: block;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.message {
+  width: 100vw;
+  min-height: 10vh;
+  box-sizing: border-box;
+  padding: .3em 1em;
+  background: #eee;
+  
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2em;
+  font-size: 10pt;
+  color: #8a8a8a;
+}
+
+.top view {
+  display: flex;
+  align-items: center;
+}
+
+.top image {
+  width: 12pt;
+  height: 12pt;
+  margin-right: 0.5em;
+}
+
+.leave-mess {
+  color: #1954c2;
+}
+.mess-list{
+  margin: 2em 0; 
+}
+.mess-item {
+  width: 100%;
+}
+
+.mess-item image {
+  width: 90rpx;
+  height: 90rpx; 
+}
+.mess-body{
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: .8em;
+  font-size: 12pt;
+  width: calc(100% - 90rpx);
+  vertical-align: top; 
+}
+.userName{
+  display: block;
+  font-size: 10pt;
+  color: #8a8a8a;
+  margin-bottom: .5em;
+}
+
+
+.payLine{
+  /*用于切割文章内容*/
+  height: 80vh;
+  overflow: hidden;
+}
+.recover{
+  /*遮罩层*/
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 30vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+ 
+}
+.pay-btn{
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  margin: auto;
+  width: 300rpx;
+  color: #fff;
+  font-size: 10pt;
+  padding: .5em 1em;
+  border-radius: 20rpx; 
+  background:#d81e06;
+}

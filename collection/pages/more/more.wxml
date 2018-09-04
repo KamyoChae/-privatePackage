@@ -1,0 +1,255 @@
+<view class='list'>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class='list-item '>
+      <view class='today'>最新</view>
+      <image class='over' src='../../image/over.png' mode='widthFix'></image>
+      <view class='item-image'>
+        <image src='../../image/sheep.png' mode='widthFix'></image>
+      </view>
+      <view class='item-main'>
+        <view class='title '>艾弗艾弗森森 篮球 06:45</view>
+        <view class='item-about '>这里是相关介绍 或是获取文章开头</view>
+        <view class='other'>
+          <view class='see'>
+            <image src='../../image/see.png' mode='widthFix'></image>
+            <text>65895</text>
+          </view>
+          <view class='favor'>
+            <image src='../../image/good.png' mode='widthFix'></image>
+            <text>9568425</text>
+          </view>
+          <view class='price'>
+            <image src='../../image/pay.png' mode='widthFix'></image>
+            <text>6.99</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

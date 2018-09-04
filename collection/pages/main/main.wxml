@@ -1,0 +1,94 @@
+<view class="wraper">
+  <view class='top-scroll'>
+    <text class='top-text'>推球集合仅有偿提供网络搜索各大著名足球、篮球解说推荐文章。非购彩，非合买，非跟单，仅供参考。购彩请选择中国体育彩票。</text>
+  </view>
+
+  <view class='list-ul'>
+    <view class='list-top'>
+      <view class='new'>最新料</view>
+      <view class='more' bindtap='goMore'>更多</view>
+    </view>
+
+    <view class='list'>
+      <block>
+        <view class='list-item ' bindtap='gotArticle'>
+          <view class='today'>最新</view>
+          <image class='over' src='../../image/over.png' mode='widthFix'></image>
+          <view class='item-image'>
+            <image src='../../image/sheep.png' mode='widthFix'></image>
+          </view>
+          <view class='item-main'>
+            <view class='title'>艾弗艾弗森森 篮球 06:45</view>
+            <view class='other'>
+              <view class='price'>
+                <image src='../../image/pay.png' mode='widthFix'></image>
+                <text>6.99</text>
+              </view>
+              <view class='pay-count'>1245人购买</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class='list-item '>
+          <view class='today'>最新</view>
+          <image class='over' src='../../image/over.png' mode='widthFix'></image>
+          <view class='item-image'>
+            <image src='../../image/sheep.png' mode='widthFix'></image>
+          </view>
+          <view class='item-main'>
+            <view class='title'>艾弗森艾弗森艾弗森艾弗森艾弗森艾弗森艾弗森艾弗森艾弗森艾弗森 篮球 06:45</view>
+            <view class='other'>
+              <view class='price'>
+                <image src='../../image/pay.png' mode='widthFix'></image>
+                <text>6.99</text>
+              </view>
+              <view class='pay-count'>1245人购买</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class='list-item '>
+          <view class='today'>最新</view>
+          <image class='over' src='../../image/over.png' mode='widthFix'></image>
+          <view class='item-image'>
+            <image src='../../image/sheep.png' mode='widthFix'></image>
+          </view>
+          <view class='item-main'>
+            <view class='title'>艾弗艾弗森艾弗森森 篮球 06:45</view>
+            <view class='other'>
+              <view class='price'>
+                <image src='../../image/pay.png' mode='widthFix'></image>
+                <text>6.99</text>
+              </view>
+              <view class='pay-count'>1245人购买</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class='list-item '>
+          <view class='today'>最新</view>
+          <image class='over' src='../../image/over.png' mode='widthFix'></image>
+          <view class='item-image'>
+            <image src='../../image/sheep.png' mode='widthFix'></image>
+          </view>
+          <view class='item-main'>
+            <view class='title'>艾弗森 篮球 06:45</view>
+            <view class='other'>
+              <view class='price'>
+                <image src='../../image/pay.png' mode='widthFix'></image>
+                <text>6.99</text>
+              </view>
+              <view class='pay-count'>1245人购买</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</view>

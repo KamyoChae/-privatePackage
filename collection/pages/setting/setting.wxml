@@ -1,0 +1,21 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='form-view'>
+    <view class='name-view'>
+      <label>姓名</label>
+      <label class='tips'>（8个汉字，16个英文字符）</label>
+    </view>
+    <input type='text' name="userName"></input>
+    <label>手机号</label>
+    <input type='text' name="userPhone"></input>
+    <label>支付宝账号</label>
+    <input type='text' name="aliPay" placeholder='适用于商户号未开通[企业支付到零钱]'></input>
+    <view class='name-view'>
+      <label>详细介绍下自己</label>
+      <label class='tips'>（140个字以内）</label>
+    </view>
+    <textarea class='aboutUser' ></textarea>
+  </view>
+
+
+  <button formType="submit">提交保存</button>
+</form>
