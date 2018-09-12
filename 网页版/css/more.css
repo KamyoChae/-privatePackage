@@ -1,0 +1,107 @@
+.list {
+    position: relative;
+    box-sizing: border-box;
+    background: #fff;
+  }
+  
+  .list-item {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 18vh;
+    padding: 0.5em;
+    border-bottom: 1rpx solid #eee;
+    overflow: hidden;
+    font-size: 0;
+  }
+  
+  .list-item view {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .item-image {
+    position: relative;
+    width: 30%;
+    height: 100%;
+  }
+  
+  .item-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+  }
+  
+  .item-main {
+    position: relative;
+    width: 70%;
+    height: 80%;
+    box-sizing: border-box;
+    font-size: 10pt; 
+  }
+  .title ,.item-about{
+    width: 100%;
+    height: 1.8em;
+    line-height: 1.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .item-about{
+  font-size: 8pt;
+  color: #8a8a8a;
+  text-indent: 1em;
+  }
+  .other {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    width: 100%;
+    height: 12pt;
+    color: #8a8a8a;
+    font-size: 8pt; 
+  }
+  .other view{ 
+    width: 30%;
+    margin-right: 2.5%; 
+    vertical-align: middle;
+  }
+  
+  .other view img {
+    width: 8pt;
+    height: 8pt;
+    margin: 0 .3em;
+  }
+  
+  
+  /*today 显示最新*/
+  .today{
+    position: absolute;
+  }
+  .today{
+    position: absolute;
+    width: 5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 10pt;
+    color: #fff ;
+    text-align: center;
+    background: red;
+    transform: rotateZ(-45deg) translate(-25%, -70%);
+  
+  }
+  
+  /* over 显示已完赛*/
+  .over{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 5%;
+    width: 20%;
+  }
