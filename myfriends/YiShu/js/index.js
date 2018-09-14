@@ -1,4 +1,5 @@
 var dog = {
+    // 奔跑的狗 动画
     ele: document.querySelector(".dog"),
     timer: null,
     run: function (flag) {
@@ -23,6 +24,7 @@ dog.run(true)
 
 var bg = {
     // 轮播图思想
+    // 背景轮播
     num: 10,
     timer: null,
     ele: document.querySelector(".randombg"),
@@ -63,6 +65,7 @@ var bg = {
 bg.init(50)
 
 var dop = {
+    // 跳动
     ele: document.querySelector(".friends"),
     target: document.querySelector(".randombg"),
     count: 0,
@@ -79,15 +82,15 @@ var dop = {
                 clearTimeout(that.timer)
                 that.timer = setInterval(function () {
                     var line = that.ele.style.bottom
-                    console.log(line)
+
                     if (line !== "0vh") {
                         that.count -= 5
                         that.ele.style.bottom = that.count + "vh"
-                    }else{
+                    } else {
                         clearInterval(that.timer)
                     }
 
-                }, 1000 / 16)
+                }, 1000 / 60)
             }, 300)
 
         }, false)
@@ -95,3 +98,46 @@ var dop = {
     },
 }
 dop.doDop()
+
+var stone = {
+    // 障碍物随机
+
+    // 障碍物检测 随机 
+    timer: null,
+    target: document.querySelector(".createBox"),
+    createStone: function () {
+        var that = this
+        this.timer = setInterval(function () {
+            var child = that.target.children
+            var len = child.length
+            console.log(len)
+            if (len == 1) {
+                var i = Math.ceil(Math.random() * 3)
+                for (var key = 0; key < i; key++) {
+                    var img = document.createElement("img")
+                    img.src = that.randomImg()
+                    img.style.top = that.randomPos() + "px"
+                    img.style.left = 100 + 'vw'
+                    that.target.appendChild(img)
+                }
+
+            }
+            
+
+
+        }, 1000 / 60)
+    },
+    randomImg: function () {
+        // 随机生成照片
+        var src = "./images/" + Math.ceil(Math.random() * 12) + ".jpg"
+        return src
+    },
+    randomPos: function () {
+        // 随机生成 障碍物纵坐标
+        var that = this
+        return Math.ceil(Math.random() * that.target.clientHeight)
+    }
+
+
+}
+stone.createStone()
