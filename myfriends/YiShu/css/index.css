@@ -43,6 +43,7 @@
     width: 100vw;
     height: 70%;
 }
+
 .friends{
     position: absolute;
     bottom: 0;
@@ -52,6 +53,9 @@
     background-image: url(../images/user.jpg);
     background-size: cover;
     border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+.rotate{
     animation: rotate 1s linear infinite;
 }
 @keyframes rotate{

@@ -20,26 +20,27 @@ var dog = {
     },
 }
 dog.run(true)
-document.querySelector(".randombg")
+
 var bg = {
     // 轮播图思想
     num: 10,
-    timer:null,
+    timer: null,
     ele: document.querySelector(".randombg"),
     init: function (sec) {
         clearTimeout(this.timer)
-        var wid 
+        var wid
         if (!sec || sec < 10) {
             wid = 1000
             sec = 3
-        }else{
+        } else {
             wid = sec * 100
         }
         this.ele.style.width = wid + "vw"
         this.ele.style.animationDuration = sec + "s"
 
-        this.timer = setTimeout(function () { 
+        this.timer = setTimeout(function () {
             // 时间到了 把狗暂停
+            document.querySelector(".friends").className = "friends"
             dog.run(false)
         }, sec * 1000);
     },
@@ -60,3 +61,37 @@ var bg = {
     },
 }
 bg.init(50)
+
+var dop = {
+    ele: document.querySelector(".friends"),
+    target: document.querySelector(".randombg"),
+    count: 0,
+    timer: null,
+    timeo: null,
+    doDop: function () {
+        var that = this
+        that.target.addEventListener("click", function () {
+            clearInterval(this.timer)
+            clearTimeout(this.timeo)
+            that.count += 10
+            that.ele.style.bottom = that.count + "vh"
+            this.timeo = setTimeout(function () {
+                clearTimeout(that.timer)
+                that.timer = setInterval(function () {
+                    var line = that.ele.style.bottom
+                    console.log(line)
+                    if (line !== "0vh") {
+                        that.count -= 5
+                        that.ele.style.bottom = that.count + "vh"
+                    }else{
+                        clearInterval(that.timer)
+                    }
+
+                }, 1000 / 16)
+            }, 300)
+
+        }, false)
+        return this
+    },
+}
+dop.doDop()
