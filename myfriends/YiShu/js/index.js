@@ -104,26 +104,37 @@ var stone = {
 
     // 障碍物检测 随机 
     timer: null,
+    flag: true,
+    width: function () {
+        // 用于初始化 移动到达左侧 隐藏判断
+        var img = document.querySelector("img")
+        try {
+            return window.getComputedStyle(img, null).getPropertyValue("width")
+        } catch (e) {
+
+        }
+    },
     target: document.querySelector(".createBox"),
     createStone: function () {
         var that = this
         this.timer = setInterval(function () {
             var child = that.target.children
             var len = child.length
-            console.log(len)
-            if (len == 1) {
-                var i = Math.ceil(Math.random() * 3)
-                for (var key = 0; key < i; key++) {
+
+            if (len <= 2) {
+                let i = Math.ceil(Math.random() * 3)
+                for (let key = 0; key < i; key++) {
                     var img = document.createElement("img")
                     img.src = that.randomImg()
                     img.style.top = that.randomPos() + "px"
                     img.style.left = 100 + 'vw'
+                    img.setAttribute("data-node", "img") // 用于标记筛选
                     that.target.appendChild(img)
                 }
-
             }
-            
 
+
+            that.createAgain()
 
         }, 1000 / 60)
     },
@@ -136,8 +147,62 @@ var stone = {
         // 随机生成 障碍物纵坐标
         var that = this
         return Math.ceil(Math.random() * that.target.clientHeight)
-    }
+    },
+    checkPos: function (arr) {
+        // 检测函数 用于检测是否触发碰撞
+        arr.forEach(function (ele, index) {
+            if (ele.targetName == "IMG") { }
+        });
+    },
+    createAgain: function () {
+        // 用于移除障碍物节点
+        var that = this
+        var child = that.target.children
+        var arr = Array.prototype.slice.call(child)
+        for (var i = 0; i < arr.length; i++) {
+            //   console.log(arr[prop].getAttribute(("data-node")))
+            var oImg = arr[i].getAttribute(("data-node"))
+            if (oImg == "img") {
 
+                var eleLeft = window.getComputedStyle(arr[i], null).getPropertyValue("left")
+                if (eleLeft == "-64px") {
 
+                    that.target.removeChild(arr[i])
+                    console.log(arr[i])
+                    
+                }else{
+                    return
+                }
+
+            }
+        }
+        /*
+        arr.forEach(function (ele, index) {
+            var node = ele.getAttribute(("data-node"))
+
+            if (node == "img") {
+                var thisImg = window.getComputedStyle(ele, null).getPropertyValue("left")
+             //   console.log(thisImg)
+             var deline = parseInt(thisImg) + parseInt(that.width())
+                if (deline == 0) {
+                  //   console.log("移除节点"+index+"了")
+                    // if(that.flag){
+                    //     that.flag = false
+                    //     clearTimeout(that.timeo)
+                    //     that.timeo = setTimeout(function(){
+                             that.target.removeChild(ele)
+                    //         console.log(ele)
+                    //         that.flag = true
+                    //     },1000)
+                    // }
+                     
+                    
+                }
+            }
+        });
+        */
+    },
+    timeo: null,
+    reDom: ""
 }
 stone.createStone()
