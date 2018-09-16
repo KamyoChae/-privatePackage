@@ -20,7 +20,7 @@ var dog = {
 
     },
 }
-dog.run(true)
+
 
 var bg = {
     // 轮播图思想
@@ -62,7 +62,7 @@ var bg = {
 
     },
 }
-bg.init(50)
+
 
 var dop = {
     // 跳动
@@ -96,22 +96,63 @@ var dop = {
         }, false)
         return this
     },
+    getPos: function () {
+        // 通过style获取bottom 通过getcomp获取cssleft，返回一个对象
+        var el = this.ele
+        var left = window.getComputedStyle(el, null).getPropertyValue("left")
+        var bottom = this.ele.style.bottom
+        return {
+            left: left,
+            bottom: bottom
+        }
+    }
 }
-dop.doDop()
+
 
 var stone = {
     // 障碍物随机
 
-    // 障碍物检测 随机 
+    // 障碍物检测 随机  
     timer: null,
+    timerPos: null,
     flag: true,
+    getPos: function () {
+        // 获取位置
+        // 通过getcomputedStyle获取css属性 
+        // 通过style获取top
+        // 给每一个img都绑定一个检测 如果left <= 头像left 并且 头像的bottom < 图片bottom+图片height 同时头像bottom > 图片bottom-图片heiht 提示游戏失败
+
+        var arr = this.target.children
+        
+        arr = Array.prototype.slice.call(arr)
+         
+        this.timerPos = setInterval(function () {
+            // console.log(that.stoneArr)
+            arr.forEach(function (ele, index) {
+                var oImg = ele.getAttribute("data-node")
+                if (oImg == "img") {
+                    var bottom = ele.style.bottom
+                    var left = window.getComputedStyle(ele, null).getPropertyValue("left")
+                    var height = window.getComputedStyle(ele, null).getPropertyValue("height")
+                    //                console.log(ele)
+                    return {
+                        bottom: bottom,
+                        left: left,
+                        height: height
+                    }
+                }
+
+            })
+
+        }, 1000 / 1)
+
+    },
     width: function () {
         // 用于初始化 移动到达左侧 隐藏判断
         var img = document.querySelector("img")
         try {
             return window.getComputedStyle(img, null).getPropertyValue("width")
         } catch (e) {
-
         }
     },
     target: document.querySelector(".createBox"),
@@ -119,24 +160,22 @@ var stone = {
         var that = this
         this.timer = setInterval(function () {
             var child = that.target.children
-            var len = child.length
 
+            var len = child.length
             if (len <= 2) {
                 let i = Math.ceil(Math.random() * 3)
                 for (let key = 0; key < i; key++) {
                     var img = document.createElement("img")
                     img.src = that.randomImg()
-                    img.style.top = that.randomPos() + "px"
+                    img.style.bottom = that.randomPos() + "px"
                     img.style.left = 100 + 'vw'
                     img.setAttribute("data-node", "img") // 用于标记筛选
                     that.target.appendChild(img)
                 }
             }
-
-
             that.createAgain()
 
-        }, 1000 / 60)
+        }, 2000)
     },
     randomImg: function () {
         // 随机生成照片
@@ -148,35 +187,32 @@ var stone = {
         var that = this
         return Math.ceil(Math.random() * that.target.clientHeight)
     },
-    checkPos: function (arr) {
-        // 检测函数 用于检测是否触发碰撞
-        arr.forEach(function (ele, index) {
-            if (ele.targetName == "IMG") { }
-        });
-    },
+
     createAgain: function () {
         // 用于移除障碍物节点
         var that = this
-        var child = that.target.children
-        var arr = Array.prototype.slice.call(child)
-        for (var i = 0; i < arr.length; i++) {
+        var child = that.target.children // Array
+        //  console.log(child)
+        //  var arr = Array.prototype.slice.call(child)
+
+        for (var i = 0; i < child.length; i++) {
             //   console.log(arr[prop].getAttribute(("data-node")))
-            var oImg = arr[i].getAttribute(("data-node"))
+            var oImg = child[i].getAttribute("data-node")
+
             if (oImg == "img") {
 
-                var eleLeft = window.getComputedStyle(arr[i], null).getPropertyValue("left")
+                var eleLeft = window.getComputedStyle(child[i], null).getPropertyValue("left")
+
                 if (eleLeft == "-64px") {
 
-                    that.target.removeChild(arr[i])
-                    console.log(arr[i])
-                    
-                }else{
-                    return
+                    that.target.removeChild(child[i])
+
                 }
 
             }
         }
         /*
+        下面这个写法 会导致一次移除掉所有子节点
         arr.forEach(function (ele, index) {
             var node = ele.getAttribute(("data-node"))
 
@@ -205,4 +241,30 @@ var stone = {
     timeo: null,
     reDom: ""
 }
-stone.createStone()
+
+
+var init = {
+    timer: null,
+    start: function () {
+        dog.run(true)
+        bg.init(50)
+        dop.doDop()
+        stone.createStone()
+        init.limtOver()
+    },
+    limtOver: function () {
+
+
+        this.timer = setInterval(function () {
+            var st = stone.getPos()
+            var dr = dop.getPos()
+            console.log(dr)
+            // console.log(dr)
+            // // 如果left <= 头像left 并且 头像的bottom < 图片bottom+图片height 同时头像bottom > 图片bottom-图片heiht 提示游戏失败
+            // if (st.left <= dr.left && dr.bottom < st.bottom + st.height && dr.bottom > st.bottom - st.height) {
+            //     console.log("游戏失败")
+            // }
+        }, 1000 / 2)
+    }
+}
+init.start()

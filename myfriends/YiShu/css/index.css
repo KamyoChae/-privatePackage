@@ -101,9 +101,9 @@
     }
 }
 .createBox img{
-    position: absolute;
-    top: 0;
+    position: absolute; 
     left: 0;
+    bottom: 0;
     width: 20vw;
     height: 20vw; 
 }
